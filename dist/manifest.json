@@ -1,0 +1,108 @@
+{
+  "name": "Ubuntu Connect",
+  "short_name": "Ubuntu Connect",
+  "description": "A culturally sensitive platform designed to unite South Africa through cross-cultural collaboration",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "categories": ["social", "education", "lifestyle"],
+  "lang": "en-ZA",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Ubuntu Connect Home Page"
+    },
+    {
+      "src": "/screenshots/mobile-registration.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Cultural Identity Registration"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Communities",
+      "short_name": "Communities",
+      "description": "Explore cultural communities",
+      "url": "/communities",
+      "icons": [
+        {
+          "src": "/icons/shortcut-communities.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Cultural Heritage",
+      "short_name": "Heritage",
+      "description": "Discover cultural heritage",
+      "url": "/cultural",
+      "icons": [
+        {
+          "src": "/icons/shortcut-heritage.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "scope": "/",
+  "id": "ubuntu-connect-pwa"
+}

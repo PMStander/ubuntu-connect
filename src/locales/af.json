@@ -1,0 +1,118 @@
+{
+  "app": {
+    "name": "Ubuntu Connect",
+    "tagline": "Verenig Suid-Afrika Deur Kulturele Samewerking",
+    "description": "ʼn Kultureel sensitiewe platform ontwerp om Suid-Afrika te verenig deur kruis-kulturele samewerking"
+  },
+  "auth": {
+    "login": "Teken In",
+    "register": "Registreer",
+    "logout": "Teken Uit",
+    "email": "E-pos Adres",
+    "password": "Wagwoord",
+    "confirmPassword": "Bevestig Wagwoord",
+    "name": "Volle Naam",
+    "forgotPassword": "Wagwoord Vergeet?",
+    "resetPassword": "Herstel Wagwoord",
+    "createAccount": "Skep Rekening",
+    "alreadyHaveAccount": "Het jy reeds ʼn rekening?",
+    "dontHaveAccount": "Het jy nie ʼn rekening nie?",
+    "signInWith": "Teken in met {{provider}}",
+    "signUpWith": "Registreer met {{provider}}",
+    "phoneNumber": "Telefoonnommer",
+    "verificationCode": "Verifikasiekode",
+    "sendCode": "Stuur Kode",
+    "verifyCode": "Verifieer Kode",
+    "welcomeBack": "Welkom terug!",
+    "welcomeToUbuntu": "Welkom by Ubuntu Connect!",
+    "culturalIdentity": {
+      "title": "Kulturele Identiteit",
+      "subtitle": "Deel jou kulturele erfenis (opsioneel)",
+      "description": "Help ons om jou met jou kulturele gemeenskap te verbind en kruis-kulturele leer moontlik te maak. Jy kan verskeie identiteite kies of hierdie stap oorslaan.",
+      "selectCultures": "Kies jou kulturele identiteite",
+      "skip": "Slaan nou oor",
+      "continue": "Gaan voort",
+      "multiple": "Jy kan verskeie kulture kies",
+      "optional": "Hierdie stap is heeltemal opsioneel",
+      "privacy": "Jou kulturele identiteit is by verstek privaat"
+    }
+  },
+  "cultural": {
+    "identities": {
+      "zulu": "Zulu",
+      "xhosa": "Xhosa",
+      "afrikaans": "Afrikaans",
+      "english": "Engels Suid-Afrikaans",
+      "sotho": "Sotho",
+      "tswana": "Tswana",
+      "tsonga": "Tsonga",
+      "venda": "Venda",
+      "swazi": "Swazi",
+      "ndebele": "Ndebele",
+      "indian": "Indiër Suid-Afrikaans",
+      "coloured": "Kleurling",
+      "other": "Ander"
+    },
+    "connectionTypes": {
+      "heritage": "Kulturele Erfenis",
+      "interest": "Kulturele Belangstelling",
+      "learning": "Leer Oor",
+      "family": "Familie Verbinding",
+      "community": "Gemeenskapslid"
+    }
+  },
+  "navigation": {
+    "home": "Tuis",
+    "communities": "Gemeenskappe",
+    "cultural": "Kulturele Erfenis",
+    "knowledge": "Kennis Uitruiling",
+    "collaboration": "Samewerk",
+    "achievements": "Prestasies",
+    "profile": "Profiel",
+    "settings": "Instellings"
+  },
+  "common": {
+    "loading": "Laai...",
+    "error": "Fout",
+    "success": "Sukses",
+    "cancel": "Kanselleer",
+    "save": "Stoor",
+    "edit": "Redigeer",
+    "delete": "Skrap",
+    "confirm": "Bevestig",
+    "back": "Terug",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "close": "Sluit",
+    "search": "Soek",
+    "filter": "Filter",
+    "sort": "Sorteer",
+    "view": "Bekyk",
+    "share": "Deel",
+    "like": "Hou van",
+    "comment": "Kommentaar",
+    "follow": "Volg",
+    "unfollow": "Ontvolg",
+    "join": "Sluit aan",
+    "leave": "Verlaat",
+    "optional": "Opsioneel",
+    "required": "Vereiste"
+  },
+  "validation": {
+    "required": "Hierdie veld is vereiste",
+    "email": "Voer asseblief ʼn geldige e-pos adres in",
+    "password": "Wagwoord moet ten minste 8 karakters wees",
+    "passwordMatch": "Wagwoorde stem nie ooreen nie",
+    "phoneNumber": "Voer asseblief ʼn geldige Suid-Afrikaanse telefoonnommer in",
+    "name": "Voer asseblief jou volle naam in"
+  },
+  "privacy": {
+    "title": "Privaatheid & Data Beskerming",
+    "description": "Ons respekteer jou privaatheid en voldoen aan POPIA (Beskerming van Persoonlike Inligting Wet)",
+    "consent": "Ek stem in tot die versameling en verwerking van my persoonlike inligting",
+    "culturalConsent": "Ek stem in tot die deel van my kulturele identiteit vir gemeenskapsmatching",
+    "dataUsage": "Leer hoe ons jou data gebruik",
+    "rights": "Jou privaatheidregte",
+    "retention": "Data retensie beleid"
+  }
+}

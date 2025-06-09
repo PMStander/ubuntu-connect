@@ -1,0 +1,118 @@
+{
+  "app": {
+    "name": "Ubuntu Connect",
+    "tagline": "Ukudibanisa uMzantsi Afrika Ngentsebenziswano Yenkcubeko",
+    "description": "Iqonga elinovelwano lwenkcubeko eliyilelwe ukudibanisa uMzantsi Afrika ngentsebenziswano yenkcubeko"
+  },
+  "auth": {
+    "login": "Ngena",
+    "register": "Bhalisa",
+    "logout": "Phuma",
+    "email": "Idilesi ye-imeyili",
+    "password": "Iphaswedi",
+    "confirmPassword": "Qinisekisa iPhaswedi",
+    "name": "Igama Elipheleleyo",
+    "forgotPassword": "Ulibale iphaswedi?",
+    "resetPassword": "Phinda Usete iPhaswedi",
+    "createAccount": "Yenza i-Akhawunti",
+    "alreadyHaveAccount": "Unayo i-akhawunti?",
+    "dontHaveAccount": "Awunayo i-akhawunti?",
+    "signInWith": "Ngena nge-{{provider}}",
+    "signUpWith": "Bhalisa nge-{{provider}}",
+    "phoneNumber": "Inombolo Yomnxeba",
+    "verificationCode": "Ikhowudi Yokuqinisekisa",
+    "sendCode": "Thumela iKhowudi",
+    "verifyCode": "Qinisekisa iKhowudi",
+    "welcomeBack": "Wamkelekile kwakhona!",
+    "welcomeToUbuntu": "Wamkelekile ku-Ubuntu Connect!",
+    "culturalIdentity": {
+      "title": "Isazisi Senkcubeko",
+      "subtitle": "Yabelana ngelifa lenkcubeko yakho (okukhethwayo)",
+      "description": "Sincede sikudibanise noluntu lwenkcubeko yakho kwaye sivumele ukufunda kwenkcubeko. Ungakhetha izazisi ezininzi okanye utsibe eli nyathelo.",
+      "selectCultures": "Khetha izazisi zenkcubeko yakho",
+      "skip": "Tsiba ngoku",
+      "continue": "Qhubeka",
+      "multiple": "Ungakhetha iinkcubeko ezininzi",
+      "optional": "Eli nyathelo likhethwa ngokupheleleyo",
+      "privacy": "Isazisi senkcubeko yakho siyimfihlo ngokungagqibekanga"
+    }
+  },
+  "cultural": {
+    "identities": {
+      "zulu": "IsiZulu",
+      "xhosa": "IsiXhosa",
+      "afrikaans": "Isi-Afrikaans",
+      "english": "IsiNgesi SaseMzantsi Afrika",
+      "sotho": "IsiSotho",
+      "tswana": "IsiTswana",
+      "tsonga": "IsiTsonga",
+      "venda": "IsiVenda",
+      "swazi": "IsiSwazi",
+      "ndebele": "IsiNdebele",
+      "indian": "AmaNdiya aseMzantsi Afrika",
+      "coloured": "AmaKhaladi",
+      "other": "Okunye"
+    },
+    "connectionTypes": {
+      "heritage": "Ilifa Lenkcubeko",
+      "interest": "Umdla Wenkcubeko",
+      "learning": "Ukufunda Ngako",
+      "family": "Unxibelelwano Losapho",
+      "community": "Ilungu Loluntu"
+    }
+  },
+  "navigation": {
+    "home": "Ikhaya",
+    "communities": "Uluntu",
+    "cultural": "Ilifa Lenkcubeko",
+    "knowledge": "Ukutshintshiselana Ngolwazi",
+    "collaboration": "Intsebenziswano",
+    "achievements": "Izinto Eziphunyeziweyo",
+    "profile": "Iprofayile",
+    "settings": "Iisetingi"
+  },
+  "common": {
+    "loading": "Iyalayisha...",
+    "error": "Impazamo",
+    "success": "Impumelelo",
+    "cancel": "Rhoxisa",
+    "save": "Gcina",
+    "edit": "Hlela",
+    "delete": "Cima",
+    "confirm": "Qinisekisa",
+    "back": "Emva",
+    "next": "Okulandelayo",
+    "previous": "Okwangaphambili",
+    "close": "Vala",
+    "search": "Khangela",
+    "filter": "Hlula",
+    "sort": "Hlela",
+    "view": "Jonga",
+    "share": "Yabelana",
+    "like": "Uyayithanda",
+    "comment": "Phawula",
+    "follow": "Landela",
+    "unfollow": "Yeka ukulandela",
+    "join": "Ngenela",
+    "leave": "Suka",
+    "optional": "Okukhethwayo",
+    "required": "Okufunekayo"
+  },
+  "validation": {
+    "required": "Le ntsimi iyafuneka",
+    "email": "Nceda ufake idilesi ye-imeyili esebenzayo",
+    "password": "Iphaswedi kufuneka ibe neempawu ezi-8 ubuncinci",
+    "passwordMatch": "Iiphaswedi azifani",
+    "phoneNumber": "Nceda ufake inombolo yomnxeba yaseMzantsi Afrika esebenzayo",
+    "name": "Nceda ufake igama lakho elipheleleyo"
+  },
+  "privacy": {
+    "title": "Ubumfihlo & Ukukhuselwa Kwedatha",
+    "description": "Siyabuhlonipha ubumfihlo bakho kwaye siyayilandela i-POPIA (Umthetho Wokukhusela Ulwazi Lomntu)",
+    "consent": "Ndiyavuma ukuqokelelwa nokucutshungulwa kolwazi lwam lomntu",
+    "culturalConsent": "Ndiyavuma ukwabelana ngesazisi senkcubeko yam ukuze kudityaniswe uluntu",
+    "dataUsage": "Funda indlela esisebenzisa ngayo idatha yakho",
+    "rights": "Amalungelo akho obumfihlo",
+    "retention": "Umgaqo-nkqubo wokugcina idatha"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "app": {
+    "name": "Ubuntu Connect",
+    "tagline": "Uniting South Africa Through Cultural Collaboration",
+    "description": "A culturally sensitive platform designed to unite South Africa through cross-cultural collaboration"
+  },
+  "auth": {
+    "login": "Sign In",
+    "register": "Sign Up",
+    "logout": "Sign Out",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "name": "Full Name",
+    "forgotPassword": "Forgot Password?",
+    "resetPassword": "Reset Password",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "signInWith": "Sign in with {{provider}}",
+    "signUpWith": "Sign up with {{provider}}",
+    "phoneNumber": "Phone Number",
+    "verificationCode": "Verification Code",
+    "sendCode": "Send Code",
+    "verifyCode": "Verify Code",
+    "welcomeBack": "Welcome back!",
+    "welcomeToUbuntu": "Welcome to Ubuntu Connect!",
+    "culturalIdentity": {
+      "title": "Cultural Identity",
+      "subtitle": "Share your cultural heritage (optional)",
+      "description": "Help us connect you with your cultural community and enable cross-cultural learning. You can select multiple identities or skip this step.",
+      "selectCultures": "Select your cultural identities",
+      "skip": "Skip for now",
+      "continue": "Continue",
+      "multiple": "You can select multiple cultures",
+      "optional": "This step is completely optional",
+      "privacy": "Your cultural identity is private by default"
+    }
+  },
+  "cultural": {
+    "identities": {
+      "zulu": "Zulu",
+      "xhosa": "Xhosa", 
+      "afrikaans": "Afrikaans",
+      "english": "English South African",
+      "sotho": "Sotho",
+      "tswana": "Tswana",
+      "tsonga": "Tsonga",
+      "venda": "Venda",
+      "swazi": "Swazi",
+      "ndebele": "Ndebele",
+      "indian": "Indian South African",
+      "coloured": "Coloured",
+      "other": "Other"
+    },
+    "connectionTypes": {
+      "heritage": "Cultural Heritage",
+      "interest": "Cultural Interest",
+      "learning": "Learning About",
+      "family": "Family Connection",
+      "community": "Community Member"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "communities": "Communities",
+    "cultural": "Cultural Heritage",
+    "knowledge": "Knowledge Exchange",
+    "collaboration": "Collaborate",
+    "achievements": "Achievements",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "view": "View",
+    "share": "Share",
+    "like": "Like",
+    "comment": "Comment",
+    "follow": "Follow",
+    "unfollow": "Unfollow",
+    "join": "Join",
+    "leave": "Leave",
+    "optional": "Optional",
+    "required": "Required"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "password": "Password must be at least 8 characters",
+    "passwordMatch": "Passwords do not match",
+    "phoneNumber": "Please enter a valid South African phone number",
+    "name": "Please enter your full name"
+  },
+  "privacy": {
+    "title": "Privacy & Data Protection",
+    "description": "We respect your privacy and comply with POPIA (Protection of Personal Information Act)",
+    "consent": "I consent to the collection and processing of my personal information",
+    "culturalConsent": "I consent to sharing my cultural identity for community matching",
+    "dataUsage": "Learn how we use your data",
+    "rights": "Your privacy rights",
+    "retention": "Data retention policy"
+  }
+}

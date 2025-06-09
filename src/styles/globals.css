@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+  
+  /* Cultural accessibility improvements */
+  *:focus {
+    @apply outline-none ring-2 ring-cultural-500 ring-offset-2;
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    body {
+      @apply bg-white text-black;
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Cultural-aware button styles */
+  .btn-primary {
+    @apply bg-cultural-500 hover:bg-cultural-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:ring-cultural-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-ubuntu-500 hover:bg-ubuntu-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:ring-ubuntu-500;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-cultural-500 text-cultural-500 hover:bg-cultural-500 hover:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  /* Cultural content card styles */
+  .cultural-card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200;
+  }
+  
+  /* Form input styles with cultural sensitivity */
+  .form-input {
+    @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-cultural-500 focus:border-cultural-500;
+  }
+  
+  /* Cultural diversity indicator */
+  .diversity-indicator {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-cultural-100 to-ubuntu-100 text-cultural-800;
+  }
+  
+  /* Loading spinner with cultural colors */
+  .spinner {
+    @apply animate-spin rounded-full border-2 border-gray-200 border-t-cultural-500;
+  }
+}
+
+@layer utilities {
+  /* Cultural text utilities */
+  .text-cultural-gradient {
+    @apply bg-gradient-to-r from-cultural-500 to-ubuntu-500 bg-clip-text text-transparent;
+  }
+  
+  .text-rainbow-nation {
+    @apply bg-rainbow-nation bg-clip-text text-transparent;
+  }
+  
+  /* Mobile-first touch targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Cultural content preservation */
+  .preserve-cultural-terms {
+    @apply font-medium text-cultural-700;
+  }
+}

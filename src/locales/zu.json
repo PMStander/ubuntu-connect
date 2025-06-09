@@ -1,0 +1,118 @@
+{
+  "app": {
+    "name": "Ubuntu Connect",
+    "tagline": "Sihlanganisa iNingizimu Afrika Ngokubambisana Kwamasiko",
+    "description": "Inkundla enomusa wamasiko eyenzelwe ukuhlanganisa iNingizimu Afrika ngokubambisana kwamasiko"
+  },
+  "auth": {
+    "login": "Ngena",
+    "register": "Bhalisa",
+    "logout": "Phuma",
+    "email": "Ikheli le-imeyili",
+    "password": "Iphasiwedi",
+    "confirmPassword": "Qinisekisa Iphasiwedi",
+    "name": "Igama Eliphelele",
+    "forgotPassword": "Ukhohlwe iphasiwedi?",
+    "resetPassword": "Setha Kabusha Iphasiwedi",
+    "createAccount": "Dala i-Akhawunti",
+    "alreadyHaveAccount": "Usunayo i-akhawunti?",
+    "dontHaveAccount": "Awunayo i-akhawunti?",
+    "signInWith": "Ngena nge-{{provider}}",
+    "signUpWith": "Bhalisa nge-{{provider}}",
+    "phoneNumber": "Inombolo Yefoni",
+    "verificationCode": "Ikhodi Yokuqinisekisa",
+    "sendCode": "Thumela Ikhodi",
+    "verifyCode": "Qinisekisa Ikhodi",
+    "welcomeBack": "Sawubona futhi!",
+    "welcomeToUbuntu": "Sawubona ku-Ubuntu Connect!",
+    "culturalIdentity": {
+      "title": "Ubunikazi Bamasiko",
+      "subtitle": "Yabelana ngobunikazi bamasiko akho (okukhethekayo)",
+      "description": "Sisize sikuxhumanise nomphakathi wamasiko akho futhi sivumele ukufunda kwamasiko. Ungakhetha ubunikazi obuningi noma weqe lesi sinyathelo.",
+      "selectCultures": "Khetha ubunikazi bamasiko akho",
+      "skip": "Yeqa manje",
+      "continue": "Qhubeka",
+      "multiple": "Ungakhetha amasiko amaningi",
+      "optional": "Lesi sinyathelo sikhethekayo ngokuphelele",
+      "privacy": "Ubunikazi bamasiko akho buyimfihlo ngokuzenzakalela"
+    }
+  },
+  "cultural": {
+    "identities": {
+      "zulu": "IsiZulu",
+      "xhosa": "IsiXhosa",
+      "afrikaans": "Isi-Afrikaans",
+      "english": "IsiNgisi SaseNingizimu Afrika",
+      "sotho": "IsiSotho",
+      "tswana": "IsiTswana",
+      "tsonga": "IsiTsonga",
+      "venda": "IsiVenda",
+      "swazi": "IsiSwazi",
+      "ndebele": "IsiNdebele",
+      "indian": "AmaNdiya aseNingizimu Afrika",
+      "coloured": "AmaKhaladi",
+      "other": "Okunye"
+    },
+    "connectionTypes": {
+      "heritage": "Ifa Lamasiko",
+      "interest": "Intshisekelo Yamasiko",
+      "learning": "Ukufunda Ngakho",
+      "family": "Ukuxhumana Komndeni",
+      "community": "Ilungu Lomphakathi"
+    }
+  },
+  "navigation": {
+    "home": "Ikhaya",
+    "communities": "Imiphakathi",
+    "cultural": "Ifa Lamasiko",
+    "knowledge": "Ukushintshana Kolwazi",
+    "collaboration": "Ukubambisana",
+    "achievements": "Izimpumelelo",
+    "profile": "Iphrofayili",
+    "settings": "Izilungiselelo"
+  },
+  "common": {
+    "loading": "Iyalayisha...",
+    "error": "Iphutha",
+    "success": "Impumelelo",
+    "cancel": "Khansela",
+    "save": "Londoloza",
+    "edit": "Hlela",
+    "delete": "Susa",
+    "confirm": "Qinisekisa",
+    "back": "Emuva",
+    "next": "Okulandelayo",
+    "previous": "Okwangaphambilini",
+    "close": "Vala",
+    "search": "Sesha",
+    "filter": "Hlunga",
+    "sort": "Hlela",
+    "view": "Buka",
+    "share": "Yabelana",
+    "like": "Uyakuthanda",
+    "comment": "Phawula",
+    "follow": "Landela",
+    "unfollow": "Yeka ukulandela",
+    "join": "Joyina",
+    "leave": "Suka",
+    "optional": "Okukhethekayo",
+    "required": "Okudingekayo"
+  },
+  "validation": {
+    "required": "Le nkambu iyadingeka",
+    "email": "Sicela ufake ikheli le-imeyili elivumelekile",
+    "password": "Iphasiwedi kufanele ibe nobumba obu-8 ubuncane",
+    "passwordMatch": "Amaphasiwedi awafani",
+    "phoneNumber": "Sicela ufake inombolo yefoni yaseNingizimu Afrika evumelekile",
+    "name": "Sicela ufake igama lakho eliphelele"
+  },
+  "privacy": {
+    "title": "Ubumfihlo & Ukuvikelwa Kwedatha",
+    "description": "Siyabuhlonipha ubumfihlo bakho futhi siyalandela i-POPIA (Umthetho Wokuvikela Ulwazi Lomuntu Siqu)",
+    "consent": "Ngiyavuma ukuqoqwa nokucutshungulwa kolwazi lwami lomuntu siqu",
+    "culturalConsent": "Ngiyavuma ukwabelana ngobunikazi bamasiko ami ukuze kufaniswe umphakathi",
+    "dataUsage": "Funda ukuthi sisebenzisa kanjani idatha yakho",
+    "rights": "Amalungelo akho obumfihlo",
+    "retention": "Inqubomgomo yokugcina idatha"
+  }
+}

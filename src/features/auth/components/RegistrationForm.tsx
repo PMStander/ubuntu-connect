@@ -134,11 +134,13 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
             type={showPassword ? 'text' : 'password'}
             fullWidth
             error={errors.password?.message}
+            rightIconInteractive={true}
             rightIcon={
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="text-gray-400 hover:text-gray-600"
+                className="text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
                 {showPassword ? (
                   <EyeSlashIcon className="w-5 h-5" />
@@ -162,11 +164,13 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
             type={showConfirmPassword ? 'text' : 'password'}
             fullWidth
             error={errors.confirmPassword?.message}
+            rightIconInteractive={true}
             rightIcon={
               <button
                 type="button"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                className="text-gray-400 hover:text-gray-600"
+                className="text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
               >
                 {showConfirmPassword ? (
                   <EyeSlashIcon className="w-5 h-5" />

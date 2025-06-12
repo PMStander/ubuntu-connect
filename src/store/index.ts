@@ -1,6 +1,5 @@
 import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
-import { immer } from 'zustand/middleware/immer'
 import { authSlice, AuthSlice } from './slices/authSlice'
 import { culturalSlice, CulturalSlice } from './slices/culturalSlice'
 import { uiSlice, UISlice } from './slices/uiSlice'
@@ -12,11 +11,11 @@ export interface RootState extends AuthSlice, CulturalSlice, UISlice {}
 export const useStore = create<RootState>()(
   devtools(
     persist(
-      immer((...args) => ({
-        ...authSlice(...args),
-        ...culturalSlice(...args),
-        ...uiSlice(...args),
-      })),
+      (set, get, api) => ({
+        ...authSlice(set, get, api),
+        ...culturalSlice(set, get, api),
+        ...uiSlice(set, get, api),
+      }),
       {
         name: 'ubuntu-connect-store',
         partialize: (state) => ({
@@ -56,6 +55,14 @@ export const useAuth = () => useStore((state) => ({
   logout: state.logout,
   register: state.register,
   updateProfile: state.updateProfile,
+  loginWithProvider: state.loginWithProvider,
+  loginWithPhone: state.loginWithPhone,
+  verifyPhoneCode: state.verifyPhoneCode,
+  resetPassword: state.resetPassword,
+  setUser: state.setUser,
+  setLoading: state.setLoading,
+  setError: state.setError,
+  clearError: state.clearError,
 }))
 
 export const useCultural = () => useStore((state) => ({

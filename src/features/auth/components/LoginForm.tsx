@@ -87,11 +87,13 @@ const LoginForm: React.FC<LoginFormProps> = ({
             type={showPassword ? 'text' : 'password'}
             fullWidth
             error={errors.password?.message}
+            rightIconInteractive={true}
             rightIcon={
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="text-gray-400 hover:text-gray-600"
+                className="text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
                 {showPassword ? (
                   <EyeSlashIcon className="w-5 h-5" />

@@ -7,6 +7,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
   helperText?: string
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
+  rightIconInteractive?: boolean // New prop to indicate if rightIcon contains interactive elements
   fullWidth?: boolean
 }
 
@@ -19,6 +20,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       helperText,
       leftIcon,
       rightIcon,
+      rightIconInteractive = false,
       fullWidth = false,
       id,
       ...props
@@ -67,7 +69,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           />
           
           {rightIcon && (
-            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+            <div className={clsx(
+              "absolute inset-y-0 right-0 pr-3 flex items-center",
+              rightIconInteractive ? "pointer-events-auto" : "pointer-events-none"
+            )}>
               <span className="text-gray-400">{rightIcon}</span>
             </div>
           )}

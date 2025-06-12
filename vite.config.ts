@@ -41,6 +41,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        // Exclude form interactions from caching to prevent input issues
+        navigateFallbackDenylist: [/^\/auth/, /^\/api/],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

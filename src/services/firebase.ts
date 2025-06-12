@@ -28,25 +28,22 @@ export const analytics = typeof window !== 'undefined' && import.meta.env.PROD
   ? getAnalytics(app) 
   : null
 
-// Connect to emulators in development
-if (import.meta.env.DEV) {
-  try {
-    // Only connect if not already connected
-    if (!auth.config.emulator) {
+// Connect to emulators in development only if explicitly enabled
+if (import.meta.env.DEV && typeof window !== 'undefined' && import.meta.env.VITE_USE_FIREBASE_EMULATORS === 'true') {
+  // Use a simple flag to track if emulators have been connected
+  if (!(window as any).__firebase_emulators_connected__) {
+    try {
+      // Connect to Firebase emulators
       connectAuthEmulator(auth, 'http://localhost:9099')
-    }
-    
-    // Check if Firestore emulator is not already connected
-    if (!(db as any)._delegate._databaseId.projectId.includes('demo-')) {
       connectFirestoreEmulator(db, 'localhost', 8080)
-    }
-    
-    // Check if Storage emulator is not already connected
-    if (!storage.app.options.storageBucket?.includes('demo-')) {
       connectStorageEmulator(storage, 'localhost', 9199)
+
+      // Set flag to prevent reconnection
+      ;(window as any).__firebase_emulators_connected__ = true
+      console.log('Firebase emulators connected successfully')
+    } catch (error) {
+      console.warn('Firebase emulators already connected or not available:', error)
     }
-  } catch (error) {
-    console.warn('Firebase emulators already connected or not available:', error)
   }
 }
 

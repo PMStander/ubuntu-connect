@@ -43,7 +43,7 @@ export interface UISlice {
 
 export const uiSlice: StateCreator<
   UISlice,
-  [["zustand/immer", never], ["zustand/devtools", never], ["zustand/persist", unknown]],
+  [],
   [],
   UISlice
 > = (set, get) => ({
@@ -57,10 +57,11 @@ export const uiSlice: StateCreator<
 
   // Actions
   setLanguage: (language: string) => {
-    set((state) => {
-      state.language = language
-    })
-    
+    set((state) => ({
+      ...state,
+      language
+    }))
+
     // Update i18n language
     import('@/services/i18n').then(({ default: i18n }) => {
       i18n.changeLanguage(language)
@@ -68,10 +69,11 @@ export const uiSlice: StateCreator<
   },
 
   setTheme: (theme: 'light' | 'dark' | 'auto') => {
-    set((state) => {
-      state.theme = theme
-    })
-    
+    set((state) => ({
+      ...state,
+      theme
+    }))
+
     // Apply theme to document
     const root = document.documentElement
     if (theme === 'dark') {
@@ -96,11 +98,12 @@ export const uiSlice: StateCreator<
       duration: 5000, // Default 5 seconds
       ...notification,
     }
-    
-    set((state) => {
-      state.notifications.push(newNotification)
-    })
-    
+
+    set((state) => ({
+      ...state,
+      notifications: [...state.notifications, newNotification]
+    }))
+
     // Auto-hide notification after duration
     if (newNotification.duration && newNotification.duration > 0) {
       setTimeout(() => {
@@ -110,15 +113,17 @@ export const uiSlice: StateCreator<
   },
 
   hideNotification: (id: string) => {
-    set((state) => {
-      state.notifications = state.notifications.filter(notification => notification.id !== id)
-    })
+    set((state) => ({
+      ...state,
+      notifications: state.notifications.filter(notification => notification.id !== id)
+    }))
   },
 
   clearAllNotifications: () => {
-    set((state) => {
-      state.notifications = []
-    })
+    set((state) => ({
+      ...state,
+      notifications: []
+    }))
   },
 
   openModal: (modal) => {
@@ -126,49 +131,53 @@ export const uiSlice: StateCreator<
       ...modal,
       isOpen: true,
     }
-    
-    set((state) => {
-      // Close existing modal with same id if it exists
-      state.modals = state.modals.filter(m => m.id !== modal.id)
-      state.modals.push(newModal)
-    })
+
+    set((state) => ({
+      ...state,
+      modals: [
+        ...state.modals.filter(m => m.id !== modal.id),
+        newModal
+      ]
+    }))
   },
 
   closeModal: (id: string) => {
-    set((state) => {
-      const modal = state.modals.find(m => m.id === id)
-      if (modal) {
-        modal.isOpen = false
-      }
-    })
-    
+    set((state) => ({
+      ...state,
+      modals: state.modals.map(m =>
+        m.id === id ? { ...m, isOpen: false } : m
+      )
+    }))
+
     // Remove modal after animation
     setTimeout(() => {
-      set((state) => {
-        state.modals = state.modals.filter(m => m.id !== id)
-      })
+      set((state) => ({
+        ...state,
+        modals: state.modals.filter(m => m.id !== id)
+      }))
     }, 300) // Match CSS transition duration
   },
 
   closeAllModals: () => {
-    set((state) => {
-      state.modals.forEach(modal => {
-        modal.isOpen = false
-      })
-    })
-    
+    set((state) => ({
+      ...state,
+      modals: state.modals.map(modal => ({ ...modal, isOpen: false }))
+    }))
+
     // Remove all modals after animation
     setTimeout(() => {
-      set((state) => {
-        state.modals = []
-      })
+      set((state) => ({
+        ...state,
+        modals: []
+      }))
     }, 300)
   },
 
   setNetworkStatus: (isOffline: boolean, quality: 'fast' | 'slow' | 'offline') => {
-    set((state) => {
-      state.isOffline = isOffline
-      state.networkQuality = quality
-    })
+    set((state) => ({
+      ...state,
+      isOffline,
+      networkQuality: quality
+    }))
   },
 })

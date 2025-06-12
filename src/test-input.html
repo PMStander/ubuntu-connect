@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .test-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .test-input:focus {
+            outline: none;
+            border-color: #f97316;
+            box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2);
+        }
+        .test-button {
+            background: #f97316;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #ea580c;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Input Interaction Test</h1>
+    <p>This page tests basic input functionality to isolate any interaction issues.</p>
+    
+    <div class="status" id="status">
+        Status: Ready for testing
+    </div>
+    
+    <form id="testForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="test-input" placeholder="Enter your email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="test-input" placeholder="Enter your password" required>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="test-input" placeholder="Enter your name" required>
+        
+        <button type="button" class="test-button" onclick="testInputs()">Test Inputs</button>
+        <button type="submit" class="test-button">Submit Form</button>
+    </form>
+    
+    <div id="results"></div>
+    
+    <script>
+        function updateStatus(message) {
+            document.getElementById('status').textContent = 'Status: ' + message;
+        }
+        
+        function testInputs() {
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const name = document.getElementById('name');
+            
+            // Test focus
+            email.focus();
+            setTimeout(() => {
+                if (document.activeElement === email) {
+                    updateStatus('Email input can be focused ✓');
+                    
+                    // Test typing
+                    email.value = 'test@example.com';
+                    password.focus();
+                    
+                    setTimeout(() => {
+                        if (document.activeElement === password) {
+                            updateStatus('Password input can be focused ✓');
+                            password.value = 'testpassword';
+                            name.focus();
+                            
+                            setTimeout(() => {
+                                if (document.activeElement === name) {
+                                    updateStatus('All inputs working correctly ✓');
+                                    name.value = 'Test User';
+                                } else {
+                                    updateStatus('Name input focus failed ✗');
+                                }
+                            }, 100);
+                        } else {
+                            updateStatus('Password input focus failed ✗');
+                        }
+                    }, 100);
+                } else {
+                    updateStatus('Email input focus failed ✗');
+                }
+            }, 100);
+        }
+        
+        // Add event listeners
+        document.getElementById('email').addEventListener('focus', () => {
+            console.log('Email input focused');
+        });
+        
+        document.getElementById('password').addEventListener('focus', () => {
+            console.log('Password input focused');
+        });
+        
+        document.getElementById('name').addEventListener('focus', () => {
+            console.log('Name input focused');
+        });
+        
+        document.getElementById('testForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            updateStatus('Form submitted successfully ✓');
+        });
+        
+        // Test on page load
+        window.addEventListener('load', () => {
+            updateStatus('Page loaded, click "Test Inputs" to verify functionality');
+        });
+    </script>
+</body>
+</html>

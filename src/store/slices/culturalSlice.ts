@@ -41,7 +41,7 @@ export interface CulturalSlice extends CulturalState {
 
 export const culturalSlice: StateCreator<
   CulturalSlice,
-  [["zustand/immer", never], ["zustand/devtools", never], ["zustand/persist", unknown]],
+  [],
   [],
   CulturalSlice
 > = (set, get) => ({
@@ -68,91 +68,129 @@ export const culturalSlice: StateCreator<
 
   // Actions
   setCulturalIdentities: (identities: string[]) => {
-    set((state) => {
-      state.userCulturalIdentities = identities
-    })
+    set((state) => ({
+      ...state,
+      userCulturalIdentities: identities
+    }))
   },
 
   addCulturalIdentity: (identity: string) => {
-    set((state) => {
-      if (!state.userCulturalIdentities.includes(identity)) {
-        state.userCulturalIdentities.push(identity)
-      }
-    })
+    set((state) => ({
+      ...state,
+      userCulturalIdentities: state.userCulturalIdentities.includes(identity)
+        ? state.userCulturalIdentities
+        : [...state.userCulturalIdentities, identity]
+    }))
   },
 
   removeCulturalIdentity: (identity: string) => {
-    set((state) => {
-      state.userCulturalIdentities = state.userCulturalIdentities.filter(id => id !== identity)
-    })
+    set((state) => ({
+      ...state,
+      userCulturalIdentities: state.userCulturalIdentities.filter(id => id !== identity)
+    }))
   },
 
   setSelectedCulture: (culture: string | null) => {
-    set((state) => {
-      state.selectedCulture = culture
-    })
+    set((state) => ({
+      ...state,
+      selectedCulture: culture
+    }))
   },
 
   updateCulturalPreferences: (preferences) => {
-    set((state) => {
-      state.culturalPreferences = { ...state.culturalPreferences, ...preferences }
-    })
+    set((state) => ({
+      ...state,
+      culturalPreferences: { ...state.culturalPreferences, ...preferences }
+    }))
   },
 
   trackCrossCulturalInteraction: (interaction) => {
     set((state) => {
-      state.crossCulturalInteractions.totalInteractions += 1
-      
-      // Calculate diversity score based on interaction
       const diversityBonus = interaction.sourceCulture !== interaction.targetCulture ? 5 : 1
       const newScore = Math.min(100, state.crossCulturalInteractions.diversityScore + diversityBonus)
-      state.crossCulturalInteractions.diversityScore = newScore
-      
-      // Update cultural learning progress
+
+      const updatedLearningProgress = { ...state.crossCulturalInteractions.culturalLearningProgress }
       if (interaction.targetCulture && interaction.sourceCulture !== interaction.targetCulture) {
-        const currentProgress = state.crossCulturalInteractions.culturalLearningProgress[interaction.targetCulture] || 0
-        state.crossCulturalInteractions.culturalLearningProgress[interaction.targetCulture] = Math.min(100, currentProgress + 2)
+        const currentProgress = updatedLearningProgress[interaction.targetCulture] || 0
+        updatedLearningProgress[interaction.targetCulture] = Math.min(100, currentProgress + 2)
+      }
+
+      return {
+        ...state,
+        crossCulturalInteractions: {
+          ...state.crossCulturalInteractions,
+          totalInteractions: state.crossCulturalInteractions.totalInteractions + 1,
+          diversityScore: newScore,
+          culturalLearningProgress: updatedLearningProgress
+        }
       }
     })
   },
 
   addCulturalBookmark: (contentId: string) => {
-    set((state) => {
-      if (!state.culturalContent.bookmarkedContent.includes(contentId)) {
-        state.culturalContent.bookmarkedContent.push(contentId)
+    set((state) => ({
+      ...state,
+      culturalContent: {
+        ...state.culturalContent,
+        bookmarkedContent: state.culturalContent.bookmarkedContent.includes(contentId)
+          ? state.culturalContent.bookmarkedContent
+          : [...state.culturalContent.bookmarkedContent, contentId]
       }
-    })
+    }))
   },
 
   removeCulturalBookmark: (contentId: string) => {
-    set((state) => {
-      state.culturalContent.bookmarkedContent = state.culturalContent.bookmarkedContent.filter(id => id !== contentId)
-    })
+    set((state) => ({
+      ...state,
+      culturalContent: {
+        ...state.culturalContent,
+        bookmarkedContent: state.culturalContent.bookmarkedContent.filter(id => id !== contentId)
+      }
+    }))
   },
 
   addContributedContent: (contentId: string) => {
-    set((state) => {
-      if (!state.culturalContent.contributedContent.includes(contentId)) {
-        state.culturalContent.contributedContent.push(contentId)
+    set((state) => ({
+      ...state,
+      culturalContent: {
+        ...state.culturalContent,
+        contributedContent: state.culturalContent.contributedContent.includes(contentId)
+          ? state.culturalContent.contributedContent
+          : [...state.culturalContent.contributedContent, contentId]
       }
-    })
+    }))
   },
 
   updateDiversityScore: (score: number) => {
-    set((state) => {
-      state.crossCulturalInteractions.diversityScore = Math.max(0, Math.min(100, score))
-    })
+    set((state) => ({
+      ...state,
+      crossCulturalInteractions: {
+        ...state.crossCulturalInteractions,
+        diversityScore: Math.max(0, Math.min(100, score))
+      }
+    }))
   },
 
   incrementBridgeConnections: () => {
-    set((state) => {
-      state.crossCulturalInteractions.bridgeConnections += 1
-    })
+    set((state) => ({
+      ...state,
+      crossCulturalInteractions: {
+        ...state.crossCulturalInteractions,
+        bridgeConnections: state.crossCulturalInteractions.bridgeConnections + 1
+      }
+    }))
   },
 
   updateCulturalLearningProgress: (culture: string, progress: number) => {
-    set((state) => {
-      state.crossCulturalInteractions.culturalLearningProgress[culture] = Math.max(0, Math.min(100, progress))
-    })
+    set((state) => ({
+      ...state,
+      crossCulturalInteractions: {
+        ...state.crossCulturalInteractions,
+        culturalLearningProgress: {
+          ...state.crossCulturalInteractions.culturalLearningProgress,
+          [culture]: Math.max(0, Math.min(100, progress))
+        }
+      }
+    }))
   },
 })
